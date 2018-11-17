@@ -60,6 +60,7 @@
     "faker": "^4.1.0",
     "mongoose": "^5.3.6",
     "mongoose-random": "^0.1.1",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "pg": "^7.6.1"
   }
 }
