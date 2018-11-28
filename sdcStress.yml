@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:3003"
+  phases:
+    # - duration: 10
+    #   arrivalRate: 100
+    - duration: 10
+      arrivalRate: 500
+  processor: "./stressTestScript.js"
+
+scenarios:
+  - flow:
+      - function: "generateRandomDataPoint"
+      - get:
+          url: "/stocks/{{ id }}"

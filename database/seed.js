@@ -28,6 +28,8 @@ const samplePostGen = function () {
   }
 };
 
+
+
 const sampleBPowerGen = function () {
   for (var i = 0; i < 101; i++) {
     let output = [

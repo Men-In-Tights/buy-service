@@ -52,20 +52,22 @@ class Form extends React.Component {
   }
 
   componentDidMount() {
-    this.asyncGet((res) => {
+    this.asyncGet((result) => {
+      console.log(result);
       this.setState({
-        company: res.data[0].symbol,
-        marketPrice: res.data[0].marketPrice,
+        company: result.stockname,
+        marketPrice: result.stockprice,
       });
     });
   }
   
   asyncGet(callback) {
-    axios.get('/data/stocks')
-      .then(function (response) {
-        callback(response);
+    const url = window.location.pathname;
+    axios.get(`/api${url}`)
+      .then(function(response) {
+        callback(response.data);
       })
-      .catch(function (error) {
+      .catch(function(error) {
         callback(error);
       });
   }
