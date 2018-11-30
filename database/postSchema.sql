@@ -13,3 +13,4 @@ CREATE TABLE IF NOT EXISTS sidebar(
 )
 
 \COPY sidebar (stockName, stockPrice, stockAccount, currencyCode) FROM '/Users/kanerao/github/SDC/buy-service/sdc/postgres/stocks.csv' WITH (FORMAT CSV, DELIMITER ',');
+
